@@ -6,10 +6,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 
 body {
     background-color: var(--azul-escuro);
+    overflow-x: hidden;
 }
 
 :root {
@@ -140,11 +142,11 @@ nav img {
     justify-content: end;
     flex-direction: column;
     max-width: 65rem;
-    width: 61.3rem;
+    width: 61rem;
     max-height: 40rem;
     margin-top: 9rem;
     background-color: var(--branco);
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .esporte h2 {
@@ -161,17 +163,19 @@ nav img {
     max-width: 37rem;
     width: 37rem;
     color: var(--cinza-escuro);
+    margin-bottom: 1rem;
 }
 
 .backgroundcr7 {
     margin-top: 9rem;
-    max-width: 55rem;
-    width: 55rem;
+    max-width: 60rem;
+    width: 60rem;
     max-height: 40rem;
     margin-bottom: 4rem;
     display: flex;
     align-items: end;
     justify-content: end;
+    object-fit: cover;
 }
 
 .frontcr7 {
@@ -179,7 +183,7 @@ nav img {
     max-width: 30rem;
     width: 30rem;
     max-height: 46.5rem;
-    margin-left: -40rem;
+    margin-left: -45rem;
 }
 
 
@@ -223,6 +227,147 @@ nav img {
     height: 1.5rem;
 }
 
+.politica {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 5rem;
+    margin-bottom: 2.5rem;
+}
+
+.esquerdapol {
+    text-decoration: none;
+    margin-right: 5rem;
+}
+
+.direitapol {
+    text-decoration: none;
+    margin-right: 20rem;
+}
+
+
+.esquerdapol h1 {
+    font-family: Poppins, sans-serif;
+    color: var(--branco);
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+}
+
+.esquerdapol p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    max-width: 32rem;
+}
+
+.esquerdapol img {
+    max-width: 35rem;
+    width: 35rem;
+    border-radius: 1rem;
+}
+
+.cartpol1 {
+    margin-bottom: 2rem;
+}
+
+.direitapol img {
+    max-width: 35rem;
+    width: 35rem;
+    border-radius: 1rem;
+    max-height: 40rem;
+}
+
+.int-cartazpol1 {
+    position: absolute;
+    display: flex;
+    gap: 3.5rem;
+    background-color: var(--cinza-transparente);
+    max-width: 35rem;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: -7.4rem;
+    max-height: 5rem;
+}
+
+.int-cartazpol1 p {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.3rem;
+    max-width: 27rem;
+}
+
+
+.int-cartazpol1 img {
+    margin-top: .8rem;
+    max-width: 1.5rem;
+    width: 1.5rem;
+    max-height: 1.5rem;
+    height: 1.5rem;
+}
+
+.int-cartazpol2 {
+    position: absolute;
+    display: flex;
+    gap: 3.5rem;
+    background-color: var(--cinza-transparente);
+    max-width: 35rem;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: -5.4rem;
+    max-height: 5rem;
+}
+
+.int-cartazpol2 p {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.3rem;
+    max-width: 27rem;
+}
+
+
+.int-cartazpol2 img {
+    margin-top: .8rem;
+    max-width: 1.5rem;
+    width: 1.5rem;
+    max-height: 1.5rem;
+    height: 1.5rem;
+}
+
+.int-cartazpol3 {
+    position: absolute;
+    gap: 3.5rem;
+    background-color: var(--cinza-transparente);
+    max-width: 35rem;
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: -11.4rem;
+    max-height: 20rem;
+    height: 11rem;
+}
+
+.int-cartazpol3 p {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.3rem;
+    margin-top: .8rem;
+    max-width: 32rem;
+}
+
+.int-cartazpol3 strong {
+    font-family: Montserrat,sans-serif;
+    color: var(--branco);
+    font-size: 1.3rem;
+}
+
+.int-cartazpol3 img {
+    margin-top: 1.2rem;
+    margin-bottom: -.3rem;
+    max-width: 1.5rem;
+    width: 1.5rem;
+    max-height: 1.5rem;
+    height: 1.5rem;
+}
+
 .flash {
     background-color: var(--azul-escuro);
     max-width: 120rem;
@@ -243,6 +388,7 @@ nav img {
     width: 43rem;
     max-height: 49rem;
     margin-left: -51rem;
+    margin-bottom: 4rem;
 }
 
 .universe {
@@ -254,7 +400,7 @@ nav img {
     width: 60rem;
     max-height: 40rem;
     margin-top: 9rem;
-    margin-left: 8rem;
+    margin-left: 7.5rem;
     background-color: var(--branco);
     gap: 3rem;
 }
