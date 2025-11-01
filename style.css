@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +8,219 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background-color: var(--azul-escuro);
+}
+
 :root {
     --branco: #FFFFFF;
     --preto: #0000;
-    --azul-escuro: #1C2629;
-    --vermelho-vibrante: #C72833;
-    --cinza-escuro: #3b3b3b;
+    --azul-escuro: #17262b;
+    --vermelho-vibrante: #c11830;
+    --cinza-escuro: #17262b;
     --cinza-transparente: #000000c7;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem ;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--branco);
+    margin-right: 20rem;
+    margin-left: 4rem;
+}
+
+
+header img {
+    max-height: 3rem;
+}
+
+
+nav ul, li{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3rem;
+}
+
+nav a {
+    font-family: Montserrat, sans-serif;
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav img {
+    margin-left: 4rem;
+    cursor: pointer;
+}
+
+.start {
+    position: relative;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 10;
+}
+
+.start h1, p{
+    font-family: Montserrat, sans-serif;
+    color: var(--branco);
+}
+
+.start h1 {
+    margin-top: 5rem;
+    font-size: 3rem;
+    width: 80rem;
+}
+
+.start p {
+    font-size: 1.4rem;
+    width: 70rem;
+    margin-right: 10rem;
+}
+
+.start a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 69rem;
+    font-family: Poppins, sans-serif;
+    
+    
+}
+
+.start button {
+    background-color: var(--vermelho-vibrante);
+    color: var(--branco);
+    width: 11rem;
+    height: 3rem;
+    margin-bottom: 5rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+#background-video {
+    margin-top: -40rem;
+    object-fit: cover;
+    width: 100%;
+    height: 42rem;
+    opacity: 40%;
+    margin-bottom: 5rem;
+}
+
+.cristiano {
+    background-color: var(--azul-escuro);
+    max-width: 120rem;
+    max-height: 55rem;
+    display: flex;
+}
+
+.esporte {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    max-width: 65rem;
+    width: 61.3rem;
+    max-height: 40rem;
+    margin-top: 9rem;
+    background-color: var(--branco);
+    gap: 3rem;
+}
+
+.esporte h2 {
+    font-size: 2.4rem;
+    max-width: 35rem;
+    font-weight: 800;
+    margin-right: 26.5rem;
+    color: var(--vermelho-vibrante);
+}
+
+.esporte p {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.55rem;
+    max-width: 37rem;
+    width: 37rem;
+    color: var(--cinza-escuro);
+}
+
+.backgroundcr7 {
+    margin-top: 9rem;
+    max-width: 55rem;
+    width: 55rem;
+    max-height: 40rem;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.frontcr7 {
+    margin-top: 2.5rem;
+    max-width: 30rem;
+    width: 30rem;
+    max-height: 46.5rem;
+    margin-left: -40rem;
+}
+
+
+.cartazcr7 a {
+    text-decoration: none;
+}
+
+.cartazcr7 img {
+    max-width: 37rem;
+    width: 37rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+}
+
+.int-cartazcr7 {
+    position: absolute;
+    display: flex;
+    gap: 2.5rem;
+    background-color: var(--cinza-transparente);
+    max-width: 37rem;
+    width: 37rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: -9.7rem;
+    max-height: 5.3rem;
+}
+
+.int-cartazcr7 p {
+    font-family: Montserrat,sans-serif;
+    font-size: 1.4rem;
+    color: var(--branco);
+    max-width: 30rem;
+    padding-left: .5rem;
+}
+
+.int-cartazcr7 img {
+    margin-top: .8rem;
+    max-width: 1.5rem;
+    width: 1.5rem;
+    max-height: 1.5rem;
+    height: 1.5rem;
 }
 
 .flash {
@@ -21,7 +230,7 @@
     display: flex;
 }
 
-.background {
+.backgroundflash {
     margin-top: 9rem;
     max-width: 60rem;
     width: 60rem;
@@ -54,30 +263,30 @@
     font-size: 2.4rem;
     max-width: 35rem;
     font-weight: 800;
-    margin-right: 3rem;
+    margin-right: 7.5rem;
     color: var(--vermelho-vibrante);
 }
 
 .universe p {
     font-family: Montserrat,sans-serif;
-    font-size: 1.65rem;
+    font-size: 1.55rem;
     max-width: 37rem;
     width: 37rem;
     color: var(--cinza-escuro);
 }
 
-.cartaz a {
+.cartazflash a {
     text-decoration: none;
 }
 
-.cartaz img {
+.cartazflash img {
     max-width: 37rem;
     width: 37rem;
     border-radius: 1rem;
     margin-bottom: 3rem;
 }
 
-.int-cartaz {
+.int-cartazflash {
     position: absolute;
     display: flex;
     gap: 2.5rem;
@@ -86,20 +295,19 @@
     width: 37rem;
     padding: 1rem;
     border-radius: 1rem;
-    margin-top: -8.5rem;
+    margin-top: -8.7rem;
     max-height: 5.3rem;
 }
 
-.int-cartaz p {
+.int-cartazflash p {
     font-family: Montserrat,sans-serif;
     font-size: 1.4rem;
-    font-weight: 100;
     color: var(--branco);
     max-width: 30rem;
     padding-left: .5rem;
 }
 
-.int-cartaz img {
+.int-cartazflash img {
     margin-top: 0.8rem;
     max-width: 1.5rem;
     width: 1.5rem;
