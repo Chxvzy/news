@@ -444,14 +444,177 @@ nav img {
     text-decoration: underline;
 }
 
-.item2 p {
+.item2tec p {
     margin-top: -2rem;
 }
 
-.item3 p {
+.item3tec p {
     margin-top: -1rem;
 }
 
+.entretenimento {
+    display: flex;
+    height: 36rem;
+    padding-top: 6.5rem;
+    margin-block: 7rem 1rem;
+    padding-right: 19rem;
+    border-top: solid .5px rgba(255, 255, 255, 0.527);
+    border-bottom: solid .5px rgba(255, 255, 255, 0.527);
+}
+
+.esquerdaent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+    margin-bottom: 13.5rem;
+    margin-right: 21rem;
+}
+
+.esquerdaent h2 {
+    font-family: Poppins,sans-serif;
+    color: var(--branco);
+    font-size: 2.3rem;
+}
+
+.esquerdaent p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4rem;
+    color: var(--branco);
+    max-width: 44%;
+    width: 60rem;
+}
+
+.meioent {
+    display: flex;
+    flex-direction: column;
+    margin-left: -50rem;
+}
+
+.meioent img {
+    width: 18rem;
+    height: 10.5rem;
+    border-radius: 1rem;
+}
+
+.direitaent {
+    display: flex;
+    flex-direction: column;
+    margin-left: -5rem;
+    margin-right: 5rem;
+}
+
+.direitaent img {
+    width: 18rem;
+    height: 10.5rem;
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+
+.int-cartazent1 {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cinza-transparente);
+    height: 5rem;
+    margin-top: -5rem;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+    width: 18rem;
+    z-index: 1;
+}
+
+.int-cartazent1 p {
+    font-family: Montserrat,sans-serif;
+    width: 14.5rem;
+    font-size: 1.2rem;
+}
+
+.int-cartazent1 img {
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: -.5rem;
+}
+
+.int-cartazent2 {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cinza-transparente);
+    height: 5rem;
+    width: 18rem;
+    margin-top: -5rem;
+    z-index: 1;
+}
+
+.int-cartazent2 p {
+    font-family: Montserrat, sans-serif;
+    width: 14.5rem;
+    font-size: 1.2rem;
+}
+
+.int-cartazent2 img {
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.int-cartazent3 {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cinza-transparente);
+    height: 5rem;
+    margin-left: 2rem;
+    margin-top: -5rem;
+    width: 18rem;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.int-cartazent3 p {
+    font-family: Montserrat,sans-serif;
+    width: 14.5rem;
+    font-size: 1.2rem;
+}
+
+.int-cartazent3 img {
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.int-cartazent4 {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background-color: var(--cinza-transparente);
+    height: 5rem;
+    margin-top: -5rem;
+    margin-left: 2rem;
+    width: 18rem;
+    z-index: 1;
+}
+
+.int-cartazent4 p {
+    font-family: Montserrat,sans-serif;
+    width: 14.5rem;
+    font-size: 1.2rem;
+}
+
+.int-cartazent4 img {
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: -.5rem;
+}
 
 .flash {
     background-color: var(--azul-escuro);
