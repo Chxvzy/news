@@ -709,3 +709,129 @@ nav img {
     max-height: 1.5rem;
     height: 1.5rem;
 }
+
+.economia {
+    margin: auto;
+    max-width: 70%;
+    padding-block: 5rem;
+}
+
+.economia h2 {
+    font-family: Poppins, sans-serif;
+    color: var(--branco);
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.economia p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4rem;
+    max-width: 80rem;
+}
+
+.baixoeco {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    margin-left: -1rem;
+}
+
+.baixoeco img {
+    width: 20rem;
+    border-radius: 1rem;
+}
+
+.baixoeco button {
+    background-color: var(--vermelho-vibrante);
+    font-family: Poppins, sans-serif;
+    color: var(--branco);
+    width: 10rem;
+    height: 3rem;
+    margin-bottom: 5rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding-block: .3rem;
+}
+
+.esquerdaeco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco);
+    width: 38rem;
+    padding-block: 2rem 2rem;
+    border-radius: 1rem;
+    height: 27rem;
+}
+
+.esquerdaeco p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    width: 20rem;
+    margin-top: 1.2rem;
+    color: var(--preto);
+}
+
+
+.esquerdaeco button {
+    margin-right: 10rem;
+    margin-top: 1.5rem;
+}
+
+.meioeco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco);
+    width: 38rem;
+    padding-block: 2rem 2rem;
+    border-radius: 1rem;
+    
+    height: 27rem;
+}
+
+.meioeco p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    width: 20rem;
+    color: var(--cinza-escuro);
+    margin-top: 1.2rem;
+}
+
+.meioeco button {
+    margin-right: 10rem;
+    margin-top: 1.5rem;
+}
+
+.direitaeco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--branco);
+    width: 38rem;
+    padding-block: 2rem 2rem;
+    border-radius: 1rem;
+    height: 27rem;
+}
+
+.direitaeco p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2rem;
+    width: 20.5rem;
+    color: var(--preto);
+    margin-top: 1.2rem;
+}
+
+.direitaeco img {
+    width: 20.5rem;
+}
+
+.direitaeco button {
+    margin-right: 10.5rem;
+    margin-top: 1.5rem;
+}
+
