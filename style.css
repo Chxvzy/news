@@ -731,10 +731,9 @@ nav img {
 
 .baixoeco {
     display: flex;
-    gap: 3rem;
-    margin-top: 3rem;
-    margin-right: 2rem;
-    margin-left: -1rem;
+    max-width: 95%;
+    gap: 5rem;
+    margin: auto;
 }
 
 .baixoeco img {
@@ -758,11 +757,13 @@ nav img {
 }
 
 .esquerdaeco {
+    margin-left: -2rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--branco);
-    width: 38rem;
+    width: 35rem;
     padding-block: 2rem 2rem;
     border-radius: 1rem;
     height: 27rem;
@@ -783,11 +784,13 @@ nav img {
 }
 
 .meioeco {
+    margin-left: -2rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--branco);
-    width: 38rem;
+    width: 35rem;
     padding-block: 2rem 2rem;
     border-radius: 1rem;
     
@@ -808,11 +811,13 @@ nav img {
 }
 
 .direitaeco {
+    margin-left: -2rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--branco);
-    width: 38rem;
+    width: 35rem;
     padding-block: 2rem 2rem;
     border-radius: 1rem;
     height: 27rem;
