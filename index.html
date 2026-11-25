@@ -608,5 +608,30 @@
         });
     </script>
 
+
+    <script>
+        // menu hambúrguer: o botão é criado aqui e só aparece em tablet e celular (ver style.css)
+        var cabecalho = document.querySelector('header');
+        var botaoMenu = document.createElement('button');
+        botaoMenu.className = 'botao-menu';
+        botaoMenu.setAttribute('aria-label', 'Abrir menu');
+        botaoMenu.setAttribute('aria-expanded', 'false');
+        botaoMenu.innerHTML = '<span></span><span></span><span></span>';
+        cabecalho.appendChild(botaoMenu);
+
+        botaoMenu.addEventListener('click', function () {
+            var aberto = cabecalho.classList.toggle('menu-aberto');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+
+        // fecha o menu quando clica em um link
+        cabecalho.querySelectorAll('nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                cabecalho.classList.remove('menu-aberto');
+                botaoMenu.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
 </body>
 </html>

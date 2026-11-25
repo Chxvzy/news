@@ -1614,3 +1614,2359 @@ nav img {
 html {
     scroll-behavior: smooth;
 }
+
+
+/* ===================== RESPONSIVIDADE ===================== */
+
+/* botão do menu (criado pelo script no fim do index) — só aparece em telas menores */
+.botao-menu {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ---------- NOTEBOOKS E MONITORES (acima de 1100px) ----------
+   O site foi feito em 1920px (= 120rem). Aqui o 1rem acompanha a largura da tela,
+   então o layout inteiro encolhe ou cresce sem quebrar. */
+@media (min-width: 1101px) {
+    html {
+        font-size: calc(100vw / 120);
+    }
+}
+
+
+/* ---------- TABLETS (até 1100px) — duas colunas ---------- */
+@media (max-width: 1100px) {
+
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* ----- cabeçalho com menu hambúrguer ----- */
+    header {
+        position: relative;
+        z-index: 30;
+        justify-content: space-between;
+        height: 7.4rem;
+        padding: 1.6rem 2.4rem;
+    }
+
+    .logo a {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .botao-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .6rem;
+        width: 4.4rem;
+        height: 4.4rem;
+        padding: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .botao-menu span {
+        display: block;
+        height: .3rem;
+        border-radius: .3rem;
+        background-color: var(--branco);
+        transition: transform .3s, opacity .3s;
+    }
+
+    header.menu-aberto .botao-menu span:nth-child(1) {
+        transform: translateY(.9rem) rotate(45deg);
+    }
+
+    header.menu-aberto .botao-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    header.menu-aberto .botao-menu span:nth-child(3) {
+        transform: translateY(-.9rem) rotate(-45deg);
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--azul-escuro);
+        box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, .4);
+        transition: max-height .35s ease;
+    }
+
+    header.menu-aberto nav {
+        max-height: 60rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: .8rem 2.4rem 2rem;
+    }
+
+    nav li {
+        justify-content: start;
+        gap: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 1.4rem 0;
+        font-size: 1.6rem;
+    }
+
+    nav img {
+        margin: 1.4rem 0 0;
+        max-height: 2.6rem;
+    }
+
+    /* ----- destaque com vídeo ----- */
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 56rem;
+        margin: 0;
+    }
+
+    .start {
+        min-height: 48.6rem;
+        padding: 3rem 4rem 5rem;
+        align-items: start;
+        justify-content: center;
+        gap: 2.4rem;
+    }
+
+    .start h1 {
+        width: auto;
+        max-width: 70rem;
+        margin-top: 0;
+        font-size: 3.4rem;
+        line-height: 1.2;
+    }
+
+    .start p {
+        width: auto;
+        max-width: 64rem;
+        margin-right: 0;
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .start a {
+        margin-right: 0;
+    }
+
+    .start button {
+        margin-bottom: 0;
+    }
+
+    /* ----- faixas escuras dos cards antigos: presas embaixo da imagem ----- */
+    .cartazcr7,
+    .cartazcr7 a,
+    .cartazpol a,
+    .direitapol a,
+    .cartazflash,
+    .cartazflash a {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .cartazcr7 img,
+    .cartazflash img,
+    .esquerdapol img,
+    .direitapol img {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .int-cartazcr7,
+    .int-cartazflash,
+    .int-cartazpol1,
+    .int-cartazpol2,
+    .int-cartazpol3 {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: none;
+        height: auto;
+        max-height: none;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+        padding: 1.2rem 1.4rem;
+    }
+
+    .int-cartazpol3 {
+        display: block;
+    }
+
+    .int-cartazcr7 p,
+    .int-cartazflash p,
+    .int-cartazpol1 p,
+    .int-cartazpol2 p,
+    .int-cartazpol3 p,
+    .int-cartazpol3 strong {
+        max-width: none;
+        padding: 0;
+        font-size: 1.3rem;
+    }
+
+    .int-cartazpol3 p {
+        margin: 0 0 .8rem;
+    }
+
+    body .int-cartazpol3 img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: .6rem;
+    }
+
+    body .int-cartazcr7 img,
+    body .int-cartazflash img,
+    body .int-cartazpol1 img,
+    body .int-cartazpol2 img,
+    body .int-cartazpol3 img {
+        width: 1.5rem;
+        max-width: 1.5rem;
+        height: 1.5rem;
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 0;
+    }
+
+    /* ----- esporte (home) ----- */
+    .cristiano {
+        align-items: stretch;
+        max-height: none;
+        margin-top: 2rem;
+    }
+
+    .esporte {
+        flex: 1 1 55%;
+        width: auto;
+        max-width: none;
+        max-height: none;
+        margin-top: 0;
+        padding: 4rem;
+        align-items: start;
+        justify-content: center;
+        gap: 2.4rem;
+    }
+
+    .esporte h2 {
+        margin-right: 0;
+        font-size: 2.6rem;
+    }
+
+    .esporte p {
+        width: auto;
+        max-width: none;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .backgroundcr7,
+    .backgroundflash {
+        display: none;
+    }
+
+    .frontcr7 {
+        flex: 0 0 40%;
+        align-self: end;
+        width: 40%;
+        max-width: none;
+        max-height: none;
+        height: auto;
+        margin: 0;
+    }
+
+    /* ----- política ----- */
+    .politica {
+        align-items: stretch;
+        justify-content: center;
+        gap: 2.4rem;
+        margin: 6rem 0 0;
+        padding: 0 4rem;
+    }
+
+    .esquerdapol {
+        flex: 1 1 55%;
+        margin: 0;
+    }
+
+    .direitapol {
+        display: flex;
+        flex: 1 1 45%;
+        margin: 0;
+    }
+
+    .esquerdapol h1 {
+        font-size: 2.6rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .esquerdapol p {
+        max-width: none;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .cartazpol {
+        margin-bottom: 1.6rem;
+    }
+
+    .direitapol a {
+        height: 100%;
+    }
+
+    .direitapol img {
+        height: 100%;
+        max-height: none;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    /* ----- tecnologia (home) ----- */
+    .tecnologia {
+        flex-wrap: wrap;
+        gap: 2.4rem;
+        margin-block: 6rem;
+        padding: 4rem;
+    }
+
+    .esquerdatec {
+        flex: 1 1 100%;
+        max-width: none;
+        gap: 1.6rem;
+    }
+
+    .esquerdatec h2 {
+        font-size: 2.6rem;
+    }
+
+    .esquerdatec img {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 21 / 9;
+        object-fit: cover;
+    }
+
+    .esquerdatec p {
+        max-width: none;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .meiotec {
+        flex: 0 0 auto;
+        gap: 1.6rem;
+        margin-left: 0;
+        padding-top: 0;
+    }
+
+    .meiotec img {
+        width: 18rem;
+        max-width: none;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .direitatec {
+        flex: 1 1 30rem;
+        justify-content: space-around;
+        gap: 1.6rem;
+        margin: 0;
+    }
+
+    .direitatec p {
+        max-width: none;
+        margin-bottom: .4rem;
+        font-size: 1.4rem;
+    }
+
+    .item2tec p,
+    .item3tec p {
+        margin-top: 0;
+    }
+
+    /* ----- entretenimento: grade 2x2 ----- */
+    .entretenimento {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem;
+        height: auto;
+        margin-block: 6rem 0;
+        padding: 5rem 4rem;
+    }
+
+    .esquerdaent {
+        grid-column: 1 / -1;
+        gap: 1.6rem;
+        margin: 0;
+    }
+
+    .esquerdaent h2 {
+        font-size: 2.6rem;
+    }
+
+    .esquerdaent p {
+        width: auto;
+        max-width: none;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .meioent,
+    .direitaent {
+        margin: 0;
+    }
+
+    body .meioent > img,
+    body .direitaent > img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .int-cartazent1,
+    .int-cartazent2,
+    .int-cartazent3,
+    .int-cartazent4 {
+        position: relative;
+        width: auto;
+        height: 5.4rem;
+        margin: -5.4rem 0 1.6rem;
+        padding: 0 1.4rem;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .int-cartazent2,
+    .int-cartazent4 {
+        margin-bottom: 0;
+    }
+
+    .int-cartazent1 p,
+    .int-cartazent2 p,
+    .int-cartazent3 p,
+    .int-cartazent4 p {
+        width: auto;
+        font-size: 1.3rem;
+    }
+
+    .int-cartazent1 img,
+    .int-cartazent2 img,
+    .int-cartazent3 img,
+    .int-cartazent4 img {
+        flex-shrink: 0;
+        margin: 0;
+    }
+
+    /* ----- universo dos heróis (home) ----- */
+    .flash {
+        align-items: end;
+        max-height: none;
+        margin-top: 6rem;
+        padding-right: 4rem;
+    }
+
+    .frontflash {
+        flex: 0 0 40%;
+        width: 40%;
+        max-width: none;
+        max-height: none;
+        height: auto;
+        margin: 0;
+    }
+
+    .universe {
+        flex: 1;
+        width: auto;
+        max-width: none;
+        max-height: none;
+        margin: 0;
+        padding: 4rem;
+        align-items: start;
+        justify-content: center;
+        gap: 2.4rem;
+    }
+
+    .universe h2 {
+        max-width: none;
+        margin-right: 0;
+        font-size: 2.6rem;
+    }
+
+    .universe p {
+        width: auto;
+        max-width: none;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    /* ----- economia ----- */
+    .economia {
+        max-width: none;
+        margin: 0;
+        padding: 6rem 4rem;
+    }
+
+    .economia h2 {
+        font-size: 2.6rem;
+    }
+
+    .economia p {
+        max-width: none;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+
+    .baixoeco {
+        max-width: none;
+        gap: 1.6rem;
+        margin: 2.4rem 0 0;
+    }
+
+    .esquerdaeco,
+    .meioeco,
+    .direitaeco {
+        flex: 1 1 0;
+        align-items: stretch;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 1.6rem;
+    }
+
+    .baixoeco img,
+    .direitaeco img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    .esquerdaeco p,
+    .meioeco p,
+    .direitaeco p {
+        width: auto;
+        font-size: 1.3rem;
+        line-height: 1.4;
+    }
+
+    .baixoeco button,
+    .esquerdaeco button,
+    .meioeco button,
+    .direitaeco button {
+        margin: 1.6rem 0 0;
+    }
+
+    /* ----- PARTE NOVA: esportes ----- */
+    .santos {
+        align-items: stretch;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .esquerdasantos {
+        flex: 1 1 50%;
+        align-self: center;
+        max-width: none;
+        margin: 0;
+        padding: 4rem;
+    }
+
+    .imgsantos {
+        flex: 0 0 50%;
+        align-self: end;
+        width: 50%;
+        height: auto;
+    }
+
+    .esquerdasantos p,
+    .direitadoak p,
+    .direitanfl p,
+    .direitajaguars p,
+    .steelers p {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .futebol {
+        align-items: stretch;
+        gap: 1.6rem;
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .esquerdafut {
+        flex: 1 1 50%;
+        gap: 1.6rem;
+    }
+
+    .cartazfut {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 40.6 / 14.6;
+    }
+
+    .direitafut {
+        flex: 1 1 50%;
+    }
+
+    .direitafut a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .bournemouth {
+        align-items: end;
+        height: auto;
+        margin-top: 6rem;
+    }
+
+    .imgdoak {
+        flex: 0 0 42%;
+        width: 42%;
+        height: auto;
+        margin: 0 0 0 2rem;
+    }
+
+    .direitadoak {
+        flex: 1;
+        align-self: center;
+        max-width: none;
+        margin: 0;
+        padding: 4rem;
+    }
+
+    .basquete {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.4rem;
+        row-gap: 4rem;
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .itembasq img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 39.5 / 17.2;
+    }
+
+    .itembasq p {
+        margin: 1.6rem 0;
+    }
+
+    .nfl {
+        align-items: center;
+        height: auto;
+        margin: 8rem 0 0 4rem;
+        padding: 3rem 0;
+    }
+
+    .imgnfl {
+        position: static;
+        flex: 0 0 46%;
+        width: 46%;
+        height: auto;
+        margin-left: -2rem;
+    }
+
+    .direitanfl {
+        flex: 1;
+        width: auto;
+        gap: 1.6rem;
+        margin: 0;
+        padding: 0 4rem 0 3rem;
+    }
+
+    .jaguars {
+        margin-top: 6rem;
+    }
+
+    .imgjaguars {
+        flex: 0 0 55%;
+        width: 55%;
+        height: auto;
+    }
+
+    .direitajaguars {
+        flex: 1;
+        width: auto;
+        margin: 0;
+        padding: 0 4rem 0 2.4rem;
+    }
+
+    .steelers {
+        align-items: center;
+    }
+
+    .steelers p {
+        flex: 1;
+        width: auto;
+        margin: 0 2.4rem 0 4rem;
+    }
+
+    .imgsteelers {
+        flex: 0 0 55%;
+        width: 55%;
+        height: auto;
+    }
+
+    .mundotec {
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .baixomundotec {
+        gap: 1.6rem;
+    }
+
+    .itemmundotec {
+        flex: 1 1 0;
+        width: auto;
+        padding: 1.6rem;
+    }
+
+    .itemmundotec img {
+        height: auto;
+        aspect-ratio: 25 / 16;
+    }
+
+    .itemmundotec p {
+        min-height: 0;
+        margin: 1.2rem 0 1.6rem;
+        font-size: 1.3rem;
+    }
+
+    .itemmundotec a {
+        margin-top: auto;
+    }
+
+    /* ----- PARTE NOVA: universo heróis ----- */
+    .thunderbolts {
+        gap: 3rem;
+        margin-top: 6rem;
+        padding: 5rem 4rem;
+    }
+
+    .esquerdathunder {
+        flex: 1 1 58%;
+        width: auto;
+    }
+
+    .esquerdathunder img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 53.8 / 29;
+    }
+
+    .direitathunder {
+        flex: 1 1 42%;
+        gap: 2rem;
+    }
+
+    .itemthunder img,
+    .itemaranha img {
+        flex: 0 0 12rem;
+        width: 12rem;
+        height: 6.6rem;
+    }
+
+    .itemthunder p,
+    .itemaranha p {
+        width: auto;
+        font-size: 1.3rem;
+    }
+
+    .superman {
+        align-items: stretch;
+        gap: 3rem;
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .imgsuperman {
+        flex: 0 0 38%;
+        width: 38%;
+        height: auto;
+        aspect-ratio: 35.3 / 47.6;
+    }
+
+    .direitasuperman {
+        flex: 1;
+        width: auto;
+    }
+
+    .direitasuperman h2 {
+        margin-top: 0;
+        font-size: 2.6rem;
+    }
+
+    .direitasuperman > p {
+        font-size: 1.5rem;
+    }
+
+    .baixosuperman {
+        gap: 1.6rem;
+        margin-top: 2.4rem;
+    }
+
+    .cartazsuperman {
+        flex: 1 1 0;
+        width: auto;
+        height: auto;
+        aspect-ratio: 24.3 / 15.3;
+    }
+
+    .storys {
+        margin-top: 6rem;
+        padding-block: 4rem;
+    }
+
+    .carrossel {
+        gap: .8rem;
+    }
+
+    .trilho {
+        width: calc(100% - 10rem);
+        gap: 1.6rem;
+    }
+
+    .story {
+        flex: 0 0 14rem;
+    }
+
+    .story img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .story p {
+        width: 14rem;
+    }
+
+    .seta {
+        margin-bottom: 6rem;
+    }
+
+    .lego {
+        gap: 3rem;
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .esquerdalego {
+        flex: 1 1 60%;
+        min-width: 0;
+        width: auto;
+    }
+
+    .esquerdalego > p {
+        font-size: 1.5rem;
+    }
+
+    .baixolego {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+        margin-top: 2.4rem;
+    }
+
+    .cartazlego {
+        height: auto;
+        aspect-ratio: 23.7 / 11.7;
+    }
+
+    .imglego {
+        flex: 0 0 36%;
+        align-self: center;
+        width: 36%;
+        min-width: 0;
+        height: auto;
+    }
+
+    .quarteto {
+        margin-top: 6rem;
+        padding: 0 4rem;
+    }
+
+    .quarteto h2 {
+        width: auto;
+        max-width: 60rem;
+    }
+
+    .baixoquarteto {
+        gap: 1.2rem;
+    }
+
+    .cartazquarteto {
+        flex: 1 1 0;
+        width: auto;
+        height: auto;
+        aspect-ratio: 22.7 / 33.5;
+    }
+
+    .int-cartazquarteto,
+    .int-cartazsuperman,
+    .int-cartazlego,
+    .int-cartazfut {
+        padding: .8rem 1.2rem;
+        gap: 1rem;
+    }
+
+    .int-cartazquarteto p,
+    .int-cartazsuperman p,
+    .int-cartazlego p,
+    .int-cartazfut p {
+        font-size: 1.2rem;
+    }
+
+    /* Homem-Aranha: matéria principal em cima e a lista em duas colunas embaixo */
+    .aranha {
+        flex-direction: column-reverse;
+        gap: 3.2rem;
+        margin-top: 6rem;
+        padding: 5rem 4rem;
+    }
+
+    .esquerdaaranha {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+    }
+
+    .direitaaranha {
+        width: auto;
+    }
+
+    .direitaaranha img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 21 / 9;
+    }
+
+    .mundogames {
+        margin-top: 6rem;
+        padding: 0 4rem 6rem;
+    }
+
+    .mundogames .baixomundotec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mundogames .itemmundotec {
+        width: auto;
+        padding: 1.6rem;
+    }
+
+    .mundogames .itemmundotec img {
+        height: auto;
+    }
+
+    .mundogames .itemmundotec p {
+        font-size: 1.3rem;
+    }
+
+    /* ----- rodapé ----- */
+    .rodape {
+        flex-wrap: wrap;
+        gap: 2.4rem;
+        padding: 4rem;
+    }
+
+    .esquerdarodape {
+        flex: 1 1 26rem;
+        width: auto;
+        margin: 0;
+    }
+
+    .colunarodape {
+        flex: 1 1 12rem;
+        width: auto;
+        margin: 0;
+    }
+}
+
+
+/* ---------- CELULARES (até 600px) — uma coluna + carrosséis ---------- */
+@media (max-width: 600px) {
+
+    header {
+        height: 6.4rem;
+        padding: 1.2rem 1.6rem;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+        gap: .8rem;
+    }
+
+    header .logo img {
+        max-height: 3.2rem;
+    }
+
+    nav ul {
+        padding: .8rem 1.6rem 2rem;
+    }
+
+    #background-video {
+        height: 58.4rem;
+    }
+
+    .start {
+        min-height: 52rem;
+        padding: 2.4rem 1.6rem 4rem;
+    }
+
+    .start h1 {
+        font-size: 2.6rem;
+    }
+
+    .start p {
+        font-size: 1.5rem;
+    }
+
+    /* textos sem justificar no celular (evita buracos entre palavras) */
+    .esquerdasantos p,
+    .direitadoak p,
+    .direitanfl p,
+    .direitajaguars p,
+    .steelers p,
+    .esquerdarodape p {
+        text-align: left;
+    }
+
+    /* ----- esporte (home) ----- */
+    .cristiano {
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .frontcr7 {
+        order: -1;
+        flex: none;
+        align-self: center;
+        width: 70%;
+        max-width: 28rem;
+    }
+
+    .esporte {
+        flex: none;
+        padding: 3.2rem 1.6rem;
+    }
+
+    /* ----- política ----- */
+    .politica {
+        flex-direction: column;
+        gap: 1.6rem;
+        padding: 0 1.6rem;
+    }
+
+    .direitapol {
+        flex: none;
+    }
+
+    .direitapol img {
+        max-height: 44rem;
+    }
+
+    /* ----- tecnologia (home) ----- */
+    .tecnologia {
+        padding: 3.2rem 1.6rem;
+    }
+
+    .meiotec {
+        flex: 1 1 100%;
+        flex-direction: row;
+        width: 100%;
+        gap: .8rem;
+    }
+
+    .meiotec img {
+        flex: 1 1 0;
+        width: 0;
+        min-width: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .direitatec {
+        flex: 1 1 100%;
+    }
+
+    /* ----- entretenimento ----- */
+    .entretenimento {
+        gap: 1rem;
+        padding: 4rem 1.6rem;
+    }
+
+    .int-cartazent1,
+    .int-cartazent2,
+    .int-cartazent3,
+    .int-cartazent4 {
+        height: 4.6rem;
+        margin-top: -4.6rem;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .int-cartazent2,
+    .int-cartazent4 {
+        margin-bottom: 0;
+    }
+
+    .int-cartazent1 p,
+    .int-cartazent2 p,
+    .int-cartazent3 p,
+    .int-cartazent4 p {
+        font-size: 1.1rem;
+    }
+
+    .int-cartazent1 img,
+    .int-cartazent2 img,
+    .int-cartazent3 img,
+    .int-cartazent4 img {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    /* ----- heróis (home) ----- */
+    .flash {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+    }
+
+    .frontflash {
+        flex: none;
+        align-self: center;
+        width: 70%;
+        max-width: 30rem;
+    }
+
+    .universe {
+        margin: 0 1.6rem;
+        padding: 3.2rem 1.6rem;
+    }
+
+    /* ----- economia ----- */
+    .economia {
+        padding: 5rem 1.6rem;
+    }
+
+    /* ----- CARROSSÉIS: os grupos de cards deslizam para o lado ----- */
+    .baixoeco,
+    .basquete,
+    .baixomundotec,
+    .mundogames .baixomundotec,
+    .baixolego,
+    .baixoquarteto {
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        margin-left: -1.6rem;
+        margin-right: -1.6rem;
+        padding: 0 1.6rem .4rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 0 1.6rem;
+        scrollbar-width: none;
+    }
+
+    .baixoeco::-webkit-scrollbar,
+    .basquete::-webkit-scrollbar,
+    .baixomundotec::-webkit-scrollbar,
+    .baixolego::-webkit-scrollbar,
+    .baixoquarteto::-webkit-scrollbar {
+        display: none;
+    }
+
+    .esquerdaeco,
+    .meioeco,
+    .direitaeco,
+    .itembasq,
+    .itemmundotec,
+    .mundogames .itemmundotec,
+    .cartazlego {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+
+    .cartazquarteto {
+        flex: 0 0 62%;
+        scroll-snap-align: start;
+    }
+
+    /* ----- PARTE NOVA: esportes ----- */
+    .santos {
+        flex-direction: column;
+    }
+
+    .esquerdasantos {
+        flex: none;
+        padding: 3.2rem 1.6rem 2rem;
+    }
+
+    .imgsantos {
+        flex: none;
+        width: 100%;
+    }
+
+    .futebol {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+    }
+
+    .esquerdafut,
+    .direitafut {
+        flex: none;
+    }
+
+    .direitafut a {
+        height: auto;
+        aspect-ratio: 4 / 5;
+    }
+
+    .bournemouth {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        margin-top: 5rem;
+    }
+
+    .imgdoak {
+        flex: none;
+        width: 80%;
+        max-width: 36rem;
+        margin: 0 auto;
+    }
+
+    .direitadoak {
+        flex: none;
+        padding: 3.2rem 1.6rem 0;
+    }
+
+    .basquete {
+        margin: 5rem 0 0;
+    }
+
+    .itembasq p {
+        font-size: 1.3rem;
+    }
+
+    .nfl {
+        flex-direction: column;
+        margin: 5rem 0 0;
+        padding: 0 0 3.2rem;
+        border-radius: 0;
+    }
+
+    .imgnfl {
+        flex: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .direitanfl {
+        flex: none;
+        padding: 2.4rem 1.6rem 0;
+    }
+
+    .jaguars {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 5rem;
+    }
+
+    .imgjaguars {
+        flex: none;
+        width: 100%;
+    }
+
+    .direitajaguars {
+        flex: none;
+        padding: 2.4rem 1.6rem 3.2rem;
+    }
+
+    .steelers {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .imgsteelers {
+        flex: none;
+        width: 100%;
+    }
+
+    .steelers p {
+        flex: none;
+        margin: 2.4rem 1.6rem 0;
+    }
+
+    .mundotec {
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+    }
+
+    /* ----- PARTE NOVA: universo heróis ----- */
+    .thunderbolts {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 4rem 1.6rem;
+    }
+
+    .esquerdathunder,
+    .direitathunder {
+        flex: none;
+    }
+
+    .superman {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+    }
+
+    .imgsuperman {
+        flex: none;
+        align-self: center;
+        width: 100%;
+        max-width: 34rem;
+    }
+
+    .baixosuperman {
+        flex-direction: column;
+    }
+
+    .cartazsuperman {
+        flex: none;
+        width: 100%;
+    }
+
+    .storys {
+        margin-top: 5rem;
+    }
+
+    .carrossel {
+        gap: .4rem;
+    }
+
+    .trilho {
+        width: calc(100% - 7rem);
+        gap: 1.2rem;
+    }
+
+    .story {
+        flex: 0 0 11rem;
+    }
+
+    .story img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .story p {
+        width: 11rem;
+        font-size: 1.1rem;
+    }
+
+    .seta img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .lego {
+        flex-direction: column;
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+    }
+
+    .esquerdalego {
+        flex: none;
+    }
+
+    .imglego {
+        flex: none;
+        align-self: center;
+        width: 100%;
+        max-width: 34rem;
+        aspect-ratio: 35.3 / 51.6;
+    }
+
+    .quarteto {
+        margin-top: 5rem;
+        padding: 0 1.6rem;
+    }
+
+    .quarteto h2,
+    .esquerdasantos h2,
+    .direitadoak h2,
+    .direitanfl h2,
+    .direitajaguars h2,
+    .mundotec h2,
+    .esquerdathunder h2,
+    .direitasuperman h2,
+    .storys h2,
+    .esquerdalego h2,
+    .direitaaranha h2,
+    .esporte h2,
+    .esquerdapol h1,
+    .esquerdatec h2,
+    .esquerdaent h2,
+    .universe h2,
+    .economia h2 {
+        font-size: 2.2rem;
+    }
+
+    .aranha {
+        flex-direction: column-reverse;
+        margin-top: 5rem;
+        padding: 4rem 1.6rem;
+    }
+
+    .esquerdaaranha {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mundogames {
+        margin-top: 5rem;
+        padding: 0 1.6rem 5rem;
+    }
+
+    /* ----- rodapé ----- */
+    .rodape {
+        gap: 2.4rem 1.2rem;
+        padding: 3.2rem 1.6rem;
+    }
+
+    .esquerdarodape {
+        flex: 1 1 100%;
+    }
+
+    .colunarodape {
+        flex: 1 1 0;
+        align-items: start;
+    }
+
+    .colunarodape h3 {
+        font-size: 1.3rem;
+    }
+
+    .colunarodape a {
+        width: auto;
+        text-align: left;
+    }
+}
+
+
+/* ===================== AJUSTE FINO: IGUAL AO CANVA (notebooks e monitores) =====================
+   Medidas tiradas do design do Canva (1366px de largura = 120rem).
+   Só vale acima de 1100px; tablet e celular continuam com o bloco de responsividade. */
+@media (min-width: 1101px) {
+
+    /* ----- cabeçalho ----- */
+    header {
+        justify-content: space-between;
+        height: 8.8rem;
+        padding: 0 8.7rem 0 9.1rem;
+    }
+
+    .logo a {
+        margin: 0;
+        gap: 1rem;
+        font-size: 1.87rem;
+    }
+
+    header .logo img {
+        max-height: 3rem;
+    }
+
+    nav ul {
+        gap: 2.8rem;
+    }
+
+    nav a {
+        font-size: 1.42rem;
+    }
+
+    nav img {
+        margin-left: 5.7rem;
+        max-height: none;
+        height: 3.2rem;
+    }
+
+    /* ----- destaque com vídeo ----- */
+    .start {
+        box-sizing: border-box;
+        align-items: start;
+        justify-content: start;
+        gap: 0;
+        height: 49.3rem;
+        padding: 0 0 0 10.8rem;
+    }
+
+    .start h1 {
+        width: 91.5rem;
+        margin-top: 12.4rem;
+        font-size: 3.42rem;
+        line-height: 1.43;
+    }
+
+    .start p {
+        width: 82rem;
+        margin: 3.2rem 0 0;
+        font-size: 1.65rem;
+        line-height: 1.38;
+    }
+
+    .start a {
+        margin: 2.8rem 0 0;
+    }
+
+    .start button {
+        width: 14.5rem;
+        height: 3.8rem;
+        margin: 0;
+        font-size: 1.62rem;
+    }
+
+    #background-video {
+        height: 49.3rem;
+        margin-top: -49.3rem;
+        margin-bottom: 0;
+    }
+
+    /* ----- esporte ----- */
+    .cristiano {
+        position: relative;
+        display: block;
+        max-width: none;
+        max-height: none;
+        height: 48.6rem;
+        margin-top: 15.7rem;
+    }
+
+    .esporte {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: block;
+        width: 62.4rem;
+        max-width: none;
+        height: 48.6rem;
+        max-height: none;
+        margin: 0;
+        padding: 8.4rem 0 0 11.4rem;
+    }
+
+    .esporte h2 {
+        max-width: none;
+        margin: 0;
+        font-size: 2.68rem;
+    }
+
+    .esporte p {
+        width: 38.8rem;
+        max-width: none;
+        margin: 1.8rem 0 0;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .cartazcr7 {
+        margin: 3.6rem 0 0 -.8rem;
+    }
+
+    .cartazcr7 a {
+        position: relative;
+        display: block;
+        width: 42.5rem;
+    }
+
+    .cartazcr7 > a > img {
+        display: block;
+        width: 42.5rem;
+        max-width: none;
+        height: 13.6rem;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .int-cartazcr7 {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        max-width: none;
+        height: 5.8rem;
+        max-height: none;
+        margin: 0;
+        padding: 0 2.2rem 0 1.8rem;
+    }
+
+    .int-cartazcr7 p {
+        max-width: 32rem;
+        padding: 0;
+        font-size: 1.42rem;
+    }
+
+    body .int-cartazcr7 img,
+    body .int-cartazflash img,
+    body .int-cartazpol1 img,
+    body .int-cartazpol2 img {
+        width: 1.5rem;
+        max-width: 1.5rem;
+        height: 1.5rem;
+        max-height: 1.5rem;
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 0;
+    }
+
+    .backgroundcr7 {
+        position: absolute;
+        top: 0;
+        left: 62.4rem;
+        width: 57.6rem;
+        max-width: none;
+        height: 48.6rem;
+        max-height: none;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .frontcr7 {
+        position: absolute;
+        bottom: 0;
+        left: 76.4rem;
+        width: auto;
+        max-width: none;
+        height: 55.8rem;
+        max-height: none;
+        margin: 0;
+    }
+
+    /* ----- política ----- */
+    .politica {
+        align-items: start;
+        justify-content: start;
+        margin: 11.2rem 0 0;
+        padding-left: 19.4rem;
+    }
+
+    .esquerdapol {
+        width: 39.5rem;
+        margin: 0;
+        padding-top: 3.2rem;
+    }
+
+    .esquerdapol h1 {
+        margin-bottom: 1.4rem;
+        font-size: 2.68rem;
+    }
+
+    .esquerdapol p {
+        max-width: 38rem;
+        margin-bottom: 2.6rem;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .cartazpol a,
+    .direitapol a {
+        position: relative;
+        display: block;
+    }
+
+    .cartazpol + .cartazpol {
+        margin-top: 2.2rem;
+    }
+
+    .esquerdapol img.cartpol1,
+    .esquerdapol img.cartpol2 {
+        display: block;
+        width: 39.5rem;
+        max-width: none;
+        height: 14rem;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .int-cartazpol1,
+    .int-cartazpol2 {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        max-width: none;
+        height: 5.8rem;
+        max-height: none;
+        margin: 0;
+        padding: 0 2.2rem 0 1.8rem;
+    }
+
+    .int-cartazpol1 p,
+    .int-cartazpol2 p {
+        max-width: 30rem;
+        font-size: 1.42rem;
+    }
+
+    .int-cartazpol1 img,
+    .int-cartazpol2 img {
+        margin: 0;
+    }
+
+    .direitapol {
+        margin: 0 0 0 3.5rem;
+    }
+
+    .direitapol > a > img {
+        display: block;
+        width: 40.8rem;
+        max-width: none;
+        height: 48.3rem;
+        max-height: none;
+        object-fit: cover;
+    }
+
+    .int-cartazpol3 {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-width: none;
+        height: auto;
+        max-height: none;
+        margin: 0;
+        padding: 2.2rem 1.6rem 2.2rem .8rem;
+    }
+
+    .int-cartazpol3 p {
+        max-width: none;
+        margin: 0 0 1.6rem;
+        font-size: 1.42rem;
+        line-height: 1.36;
+    }
+
+    .int-cartazpol3 strong {
+        font-size: 1.42rem;
+    }
+
+    .int-cartazpol3 img {
+        margin: 0 0 -.2rem .6rem;
+    }
+
+    /* ----- tecnologia ----- */
+    .tecnologia {
+        box-sizing: border-box;
+        align-items: start;
+        height: 56.5rem;
+        margin: 9.7rem 0 0;
+        padding: 5.4rem 0 0 11.8rem;
+    }
+
+    .esquerdatec {
+        width: 46.5rem;
+        max-width: none;
+        gap: 0;
+    }
+
+    .esquerdatec h2 {
+        margin-bottom: 3rem;
+        font-size: 2.68rem;
+    }
+
+    .esquerdatec img {
+        width: 46.5rem;
+        max-width: none;
+        height: 29rem;
+        object-fit: cover;
+        border-radius: .8rem;
+    }
+
+    .esquerdatec p {
+        max-width: 46rem;
+        margin-top: 2rem;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .meiotec {
+        gap: 2.2rem;
+        margin-left: 3.9rem;
+        padding-top: 6.4rem;
+    }
+
+    .meiotec img {
+        width: 17.6rem;
+        max-width: none;
+        height: 11.3rem;
+        object-fit: cover;
+        border-radius: .8rem;
+    }
+
+    .direitatec {
+        gap: 0;
+        margin: 6.4rem 0 0 1.8rem;
+    }
+
+    .direitatec > div {
+        height: 13.5rem;
+    }
+
+    .direitatec p,
+    .item2tec p,
+    .item3tec p {
+        max-width: 24.5rem;
+        margin: .3rem 0 1rem;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .direitatec strong {
+        font-size: 1.6rem;
+    }
+
+    /* ----- entretenimento ----- */
+    .entretenimento {
+        display: grid;
+        grid-template-columns: 35.7rem 20.6rem 2.4rem 20.6rem;
+        align-items: start;
+        height: auto;
+        margin: 15.3rem 0 0;
+        padding: 0 0 0 19.8rem;
+        border: none;
+    }
+
+    .esquerdaent {
+        gap: 0;
+        margin: 0;
+        padding-top: 2.8rem;
+    }
+
+    .esquerdaent h2 {
+        margin-bottom: 2.8rem;
+        font-size: 2.68rem;
+    }
+
+    .esquerdaent p {
+        width: 30rem;
+        max-width: none;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .meioent,
+    .direitaent {
+        margin: 0;
+    }
+
+    .direitaent {
+        grid-column: 4;
+    }
+
+    .meioent > img,
+    .direitaent > img {
+        width: 20.6rem;
+        height: 11.8rem;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .int-cartazent1,
+    .int-cartazent2,
+    .int-cartazent3,
+    .int-cartazent4 {
+        position: relative;
+        justify-content: space-between;
+        width: 20.6rem;
+        height: 3.6rem;
+        margin: -3.6rem 0 0;
+        padding: 0 1.2rem 0 .9rem;
+    }
+
+    .int-cartazent1,
+    .int-cartazent3 {
+        margin-bottom: 2.2rem;
+    }
+
+    .int-cartazent1 p,
+    .int-cartazent2 p,
+    .int-cartazent3 p,
+    .int-cartazent4 p {
+        width: auto;
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    .int-cartazent1 img,
+    .int-cartazent2 img,
+    .int-cartazent3 img,
+    .int-cartazent4 img {
+        margin: 0;
+    }
+
+    /* ----- universo dos heróis ----- */
+    .flash {
+        position: relative;
+        display: block;
+        max-width: none;
+        max-height: none;
+        height: 44.8rem;
+        margin-top: 15rem;
+    }
+
+    .backgroundflash {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 62.4rem;
+        max-width: none;
+        height: 44.8rem;
+        max-height: none;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .frontflash {
+        position: absolute;
+        bottom: 0;
+        left: 8.3rem;
+        z-index: 1;
+        width: auto;
+        max-width: none;
+        height: 54.2rem;
+        max-height: none;
+        margin: 0;
+    }
+
+    .universe {
+        position: absolute;
+        top: 0;
+        left: 62.4rem;
+        display: block;
+        width: 57.6rem;
+        max-width: none;
+        height: 44.8rem;
+        max-height: none;
+        margin: 0;
+        padding: 4.4rem 0 0 9.2rem;
+    }
+
+    .universe h2 {
+        max-width: none;
+        margin: 0;
+        font-size: 2.68rem;
+    }
+
+    .universe p {
+        width: 38.5rem;
+        max-width: none;
+        margin: 2.4rem 0 0;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .cartazflash {
+        margin: 2.4rem 0 0 -.4rem;
+    }
+
+    .cartazflash a {
+        position: relative;
+        display: block;
+        width: 40.6rem;
+    }
+
+    .cartazflash > a > img {
+        display: block;
+        width: 40.6rem;
+        max-width: none;
+        height: 14.9rem;
+        margin: 0;
+        object-fit: cover;
+    }
+
+    .int-cartazflash {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        max-width: none;
+        height: 5.8rem;
+        max-height: none;
+        margin: 0;
+        padding: 0 2.2rem 0 1.6rem;
+    }
+
+    .int-cartazflash p {
+        max-width: 30rem;
+        padding: 0;
+        font-size: 1.42rem;
+    }
+
+    .int-cartazflash img {
+        margin: 0;
+    }
+
+    /* ----- economia ----- */
+    .economia {
+        max-width: none;
+        margin: 0;
+        padding: 12.2rem 0 0 13.1rem;
+    }
+
+    .economia h2 {
+        margin-bottom: 2.2rem;
+        font-size: 2.68rem;
+    }
+
+    .economia p {
+        max-width: 91rem;
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .baixoeco {
+        max-width: none;
+        gap: 2.5rem;
+        margin: 4.6rem 0 0 -1.2rem;
+    }
+
+    .esquerdaeco,
+    .meioeco,
+    .direitaeco {
+        align-items: start;
+        width: 30rem;
+        height: 33.2rem;
+        margin: 0;
+        padding: 2.4rem 2.5rem;
+    }
+
+    .baixoeco img,
+    .direitaeco img {
+        width: 24.7rem;
+        height: 16.2rem;
+        object-fit: cover;
+        border-radius: .8rem;
+    }
+
+    .esquerdaeco p,
+    .meioeco p,
+    .direitaeco p {
+        width: 24.2rem;
+        margin: 1.4rem 0 0 .3rem;
+        font-size: 1.45rem;
+        line-height: 1.42;
+    }
+
+    .esquerdaeco button,
+    .meioeco button,
+    .direitaeco button {
+        width: 13.4rem;
+        height: 3.2rem;
+        margin: 1.6rem 0 0 .3rem;
+        font-size: 1.5rem;
+    }
+
+    /* ----- partes novas: pequenos acertos de espaçamento ----- */
+    .santos {
+        margin-top: 14.2rem;
+    }
+
+    .nfl {
+        margin-top: 14.6rem;
+    }
+
+    .jaguars {
+        margin-top: 20.8rem;
+    }
+}
+
+/* ----- partes novas: tamanhos de texto e botões iguais ao Canva ----- */
+@media (min-width: 1101px) {
+
+    .esquerdasantos h2,
+    .direitadoak h2,
+    .direitanfl h2,
+    .esquerdathunder h2,
+    .direitaaranha h2 {
+        font-size: 2.68rem;
+    }
+
+    .direitajaguars h2,
+    .mundotec h2,
+    .direitasuperman h2,
+    .esquerdalego h2,
+    .quarteto h2,
+    .storys h2 {
+        font-size: 2.68rem;
+    }
+
+    .esquerdasantos p,
+    .direitadoak p,
+    .direitanfl p,
+    .direitajaguars p,
+    .steelers p,
+    .itembasq p,
+    .esquerdathunder p,
+    .direitasuperman > p,
+    .esquerdalego > p,
+    .direitaaranha p {
+        font-size: 1.65rem;
+        line-height: 1.36;
+    }
+
+    .esquerdasantos {
+        max-width: 47rem;
+        padding-top: 4.4rem;
+    }
+
+    .direitadoak {
+        max-width: 43rem;
+    }
+
+    .direitanfl {
+        width: 47.5rem;
+        padding-top: 4.6rem;
+    }
+
+    .nfl {
+        height: 49.8rem;
+    }
+
+    .imgnfl {
+        top: 3.4rem;
+    }
+
+    .direitajaguars {
+        width: 41.5rem;
+    }
+
+    .steelers p {
+        width: 40.5rem;
+        margin-top: 2.4rem;
+    }
+
+    .santos button,
+    .bournemouth button,
+    .itembasq button,
+    .esquerdathunder button,
+    .itemmundotec button {
+        width: 14.5rem;
+        height: 3.8rem;
+        font-size: 1.62rem;
+    }
+
+    .itemmundotec {
+        padding: 2.2rem 2.6rem 2.6rem;
+    }
+
+    .itemmundotec p {
+        font-size: 1.42rem;
+        line-height: 1.36;
+        min-height: 6.4rem;
+        margin-block: 1.4rem 1.4rem;
+    }
+
+    .mundogames .itemmundotec p {
+        font-size: 1.15rem;
+        min-height: 5rem;
+    }
+
+    .mundogames .itemmundotec button {
+        width: 11.8rem;
+        height: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .int-cartazfut p,
+    .int-cartazfut2 p,
+    .int-cartazfut2 strong {
+        font-size: 1.62rem;
+    }
+
+    .int-cartazfut {
+        padding: 1rem 2rem;
+    }
+
+    .itemthunder p,
+    .itemaranha p,
+    .itemthunder strong,
+    .itemaranha strong {
+        font-size: 1.42rem;
+        line-height: 1.36;
+    }
+
+    .itemthunder p,
+    .itemaranha p {
+        width: 22rem;
+    }
+
+    .int-cartazsuperman p,
+    .int-cartazlego p {
+        font-size: 1.32rem;
+    }
+
+    .int-cartazquarteto p {
+        font-size: 1.32rem;
+    }
+
+    .story p {
+        font-size: 1.32rem;
+        line-height: 1.3;
+    }
+
+    .quarteto h2 {
+        width: 64rem;
+    }
+
+    .esquerdalego h2 {
+        width: 48rem;
+    }
+
+    /* rodapé */
+    .rodape {
+        padding: 4.4rem 0 4.4rem 11.8rem;
+    }
+
+    .esquerdarodape {
+        width: 28.6rem;
+        margin-right: 7.8rem;
+    }
+
+    .esquerdarodape a {
+        font-size: 2.5rem;
+    }
+
+    .esquerdarodape p {
+        font-size: 1.42rem;
+    }
+
+    .colunarodape {
+        width: 13.5rem;
+        margin-right: 7.5rem;
+    }
+
+    .colunarodape h3 {
+        font-size: 1.62rem;
+    }
+
+    .colunarodape a {
+        font-size: 1.42rem;
+    }
+}
+
+/* ----- espaçamentos entre seções conferidos com o Canva ----- */
+@media (min-width: 1101px) {
+    .economia      { padding-top: 10.4rem; }
+    .nfl           { margin-top: 12.9rem; }
+    .jaguars       { margin-top: 11.8rem; }
+    .mundotec      { margin-top: 14.4rem; }
+    .thunderbolts  { margin-top: 9.5rem; }
+    .superman      { margin-top: 7.8rem; }
+    .lego          { margin-top: 7.5rem; }
+    .storys + .quarteto,
+    .quarteto      { margin-top: 4.8rem; }
+}
+@media (min-width: 1101px) {
+    .mundogames { margin-top: 7.7rem; }
+}
+
+/* ----- últimos acertos conferidos lado a lado com o Canva ----- */
+@media (min-width: 1101px) {
+    .direitanfl         { padding-top: 6.6rem; }
+    .direitajaguars h2  { width: 30rem; }
+    .steelers p         { margin-top: 6.8rem; }
+    .direitasuperman h2 { width: 46rem; }
+    .esquerdalego h2    { width: 43rem; }
+    .quarteto h2        { width: 58rem; }
+    .itemthunder p      { font-size: 1.5rem; }
+
+    .rodape {
+        padding-top: 5.6rem;
+    }
+
+    .esquerdarodape {
+        margin-right: 11.8rem;
+    }
+
+    .colunarodape {
+        margin-right: 5.5rem;
+    }
+}
+
+@media (min-width: 1101px) {
+    .trilho {
+        width: 85rem;
+        gap: 0;
+    }
+
+    .story {
+        flex: 0 0 17rem;
+    }
+
+    .story p {
+        width: 16.4rem;
+    }
+
+    .lego       { margin-top: 8.4rem; }
+    .mundogames { margin-top: 9.9rem; }
+}
+@media (min-width: 1101px) {
+    .storys + .quarteto,
+    .quarteto   { margin-top: 8.6rem; }
+    .mundogames { margin-top: 11rem; }
+}
+@media (min-width: 1101px) {
+    .direitanfl       { padding-top: 9rem; }
+    .steelers p       { margin-top: 11.8rem; }
+    .direitaaranha p  { font-size: 1.55rem; }
+}
+@media (min-width: 1101px) {
+    .mundogames { margin-top: 13.5rem; }
+}
